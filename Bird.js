@@ -9,7 +9,14 @@ class Bird extends BaseClass {
 
   display() {
     super.display();
+    
+    if(gameState === "onSling"){
+      this.trajectory = [];
+      this.Visibility = 255;
+      Body.setAngle(this.body,0);
+    }
 
+    
     if(this.body.velocity.x > 10 && this.body.position.x > 200){
       var position = [this.body.position.x, this.body.position.y];
       this.trajectory.push(position);
