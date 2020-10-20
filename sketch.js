@@ -91,7 +91,6 @@ function mouseReleased(){
 function keyPressed(){
     if(keyCode === 32 && gameState === "launched"){
         Body.setPosition(bird.body,{x:200,y:50});
-        Body.setAngle(bird.body,0);
         slingshot.attach(bird.body);
         gameState="onSling";
     }
